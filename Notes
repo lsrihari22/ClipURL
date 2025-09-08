@@ -1,0 +1,43 @@
+Setup:
+
+1. npm create vite@latest
+
+2. Install shadcn
+
+3. Setup supabase and create tables in supabase
+
+4. install react-router-dom
+
+5. Create all the pages and components
+
+6. Add shadcn components and images/button/forms
+
+7. Do the form actions (Buttons, onSubmit, routing)
+
+8. Auth-> write logic for signup or login to show
+
+9. auth API setup
+
+10. login & signup component + state management + Yup (Validation)
+
+11. useFetch -> handling API calls (Login)
+
+12. If login credentials is valid then navigate to that search param
+
+13. Setup signup page, use context.jsx -> to see if user is logged in, then route to /dashboard if signup successful
+
+14. logged in -> navigate '/auth' to '/dashboard' and show user details if logged in and login button otherwise
+
+15. setup and update
+
+16.
+
+
+
+
+ISSUES:
+1. Loading in dashboard page -> LinkCard.jsx
+2. Styles not working in LinkCard.jsx
+3. Loading in header
+
+//2.09.00 ->
