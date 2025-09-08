@@ -23,7 +23,7 @@ export async function deleteUrl(id) {
         .eq("id",id);
 
     if(error){
-        console.error( error.mesage);
+        console.error( error.message);
         throw new Error("Unable to delete URLs");
     } 
 
@@ -32,7 +32,7 @@ export async function deleteUrl(id) {
 
 export async function createUrl({title, long_url, custom_url, user_id},qrcode) {
     const short_url = Math.random().toString(36).substring(2,6);
-    const fileName = `qr-${short_url}`;
+    const fileName = `qr-${short_url}.png`;
 
     const {error: storageError} = await supabase.storage
         .from("qr_codes")
@@ -67,7 +67,7 @@ export async function getLongUrl(id) {
         .single();
 
     if(error){
-        console.error( error.mesage);
+        console.error( error.message);
         throw new Error("Long URL not found");
     } 
 
@@ -83,7 +83,7 @@ export async function getUrl({id,user_id}) {
         .single();
 
     if(error){
-        console.error( error.mesage);
+        console.error( error.message);
         throw new Error("Short URL not found");
     } 
 

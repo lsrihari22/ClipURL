@@ -43,7 +43,7 @@ const Dashboard = () => {
     
     return (
         <div className="flex flex-col gap-8">
-            { loading || loadingClicks && <BarLoader width={"100%"} color="#36d7b7" />}
+            { (loading || loadingClicks) && <BarLoader width={"100%"} color="#36d7b7" />}
             <div className="grid grid-cols-2 gap-4">
                 <Card>
                 <CardHeader>
@@ -79,7 +79,7 @@ const Dashboard = () => {
             </div>
             {error && <Error message={error?.message} />}
             {(filteredUrls || []).map((url,i)=>{
-                return <LinkCard key={i} url={url} fetchUrl={fnUrls} />
+                return <LinkCard key={i} url={url} fetchUrls={fnUrls} />
             })}
 
         </div>

@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 
 const LandingPage = () => {
-    const [long_url, setLongUrl] = useState();
+    const [long_url, setLongUrl] = useState("");
     const navigate=useNavigate();
 
     const handleShorten=(e) =>{
         
         e.preventDefault();
-        if(long_url) navigate(`/auth?createNew=${long_url}`);
+        if(long_url) navigate(`/auth?createNew=${encodeURIComponent(long_url)}`);
     }
 
     return (

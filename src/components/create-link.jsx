@@ -71,7 +71,7 @@ export default function CreateLink() {
   }, [error, data]);
 
   const createNewLink = async () => {
-    setErrors([]);
+    setErrors({});
     try {
       await schema.validate(formValues, {abortEarly: false});
       const canvas = ref.current.canvasRef.current;
